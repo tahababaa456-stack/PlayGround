@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Five Nights at Mario's</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="game">
+  <section id="menu" class="screen active">
+    <div class="stars"></div><div class="moon"></div>
+    <div class="menu-window"><div class="pixel-title"><span>FIVE NIGHTS</span><b>AT</b><span>MARIO'S</span></div><p class="subtitle">Moonlight Manor · 12:00 AM</p></div>
+    <button id="newGame" class="menu-start">NEW GAME</button>
+    <div class="menu-bottom"><span>© 1989 MUSHROOM CLUB</span><span id="highscore">NIGHT 1</span></div>
+  </section>
+
+  <section id="office" class="screen">
+    <div class="office-bg">
+      <div class="wall left-wall"><div class="poster poster1">★<br><small>DOORS<br>LOCK!</small></div></div>
+      <div class="back-wall">
+        <div class="cobweb c1"></div><div class="cobweb c2"></div>
+        <div class="pipe pipe-left"></div><div class="pipe pipe-right"></div>
+        <div class="watch-window"><div class="watch-eyes"></div><div class="cage-bars"></div></div>
+      </div>
+      <div class="wall right-wall"><div class="poster poster2">? !<br><small>NIGHT<br>SHIFT</small></div></div>
+      <div class="desk"><div class="fan"><div class="fan-base"></div><div class="blades"></div><div class="fan-neck"></div></div><div class="paper p1"></div><div class="paper p2"></div><div class="cup"></div></div>
+      <div class="door left-door"><div class="door-pattern"></div><div class="left-foe" id="leftFoe">M</div></div>
+      <div class="door right-door"><div class="door-pattern"></div><div class="right-foe" id="rightFoe">L</div></div>
+      <button class="door-control left-control" data-side="left"><span>DOOR</span><i></i></button>
+      <button class="light-control left-light" data-side="left"><span>LIGHT</span><i></i></button>
+      <button class="door-control right-control" data-side="right"><span>DOOR</span><i></i></button>
+      <button class="light-control right-light" data-side="right"><span>LIGHT</span><i></i></button>
+    </div>
+    <div class="hud"><div><b id="power">100</b>%<small>POWER LEFT</small><div class="usage" id="usage"><i></i><i></i><i></i><i></i><i></i></div></div><div class="clock"><b id="hour">12</b><span>AM</span><small>NIGHT <i id="night">1</i></small></div></div>
+    <button id="monitorButton" class="monitor-button"><span>▣</span> CAMERAS</button>
+  </section>
+
+  <section id="monitor" class="screen">
+    <div class="static"></div><div class="map-grid"></div>
+    <div class="camera-feed" id="cameraFeed"><div class="room-art" id="roomArt"></div><div id="enemyInCam" class="enemy-in-cam"></div></div>
+    <div class="map"><div class="map-title">CAMERA SYSTEM</div>
+      <button class="cam active" data-cam="1A">1A</button><button class="cam" data-cam="1B">1B</button>
+      <button class="cam" data-cam="2A">2A</button><button class="cam" data-cam="2B">2B</button>
+      <button class="cam" data-cam="3">3</button><button class="cam" data-cam="4A">4A</button>
+      <button class="cam" data-cam="4B">4B</button><button class="cam" data-cam="5">5</button>
+      <div class="map-lines"></div>
+    </div>
+    <div class="camera-status">CAMERA <b id="camName">1A</b><span id="camTime">REC ●</span></div>
+    <button id="monitorClose" class="monitor-button close"><span>▾</span> LOWER MONITOR</button>
+  </section>
+
+  <section id="jumpscare" class="screen"><div class="scare-bg"></div><div class="scare-face"><div class="scare-cap">M</div><div class="scare-eyes">● &nbsp; ●</div><div class="scare-mouth"></div></div><div class="scare-name">GAME OVER</div></section>
+  <section id="win" class="screen"><div class="win-stars"></div><div class="win-card"><div class="win-badge">★ 6 AM ★</div><h1>SURVIVED</h1><p id="winText">NIGHT 1 COMPLETE</p><button id="nextNight">CONTINUE</button></div></section>
+</section>
+<script src="game.js"></script>
+</body></html>
